@@ -3,119 +3,1519 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Northeast Disability Advocates | National SSDI Experts</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Northeast Disability Advocates | Social Security Disability Representatives</title>
+    <meta name="description" content="Federally certified disability representatives fighting for your Social Security benefits. Nationwide representation with Connecticut roots. We Finish the Fight.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
-        :root { --navy: #000080; --gold: #FCD816; }
-        .font-serif { font-family: 'Playfair+Display', serif; }
-        .bg-navy { background-color: var(--navy); }
-        .text-gold { color: var(--gold); }
-        .bg-gold { background-color: var(--gold); }
-        .hover-gold:hover { background-color: #e5c614; }
-        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        :root {
+            --navy: #000080;
+            --navy-light: #1a1a9a;
+            --gold: #FCD816;
+            --gold-light: #ffdf4a;
+            --gold-dark: #d4b800;
+            --cream: #faf8f5;
+            --cream-dark: #f0ebe3;
+            --slate: #4a5568;
+            --slate-light: #718096;
+            --white: #ffffff;
+            --success: #2d6a4f;
+            --font-display: 'Crimson Pro', Georgia, serif;
+            --font-body: 'Source Sans 3', -apple-system, BlinkMacSystemFont, sans-serif;
+            --shadow-sm: 0 1px 3px rgba(0, 0, 128, 0.08);
+            --shadow-md: 0 4px 12px rgba(0, 0, 128, 0.1);
+            --shadow-lg: 0 8px 30px rgba(0, 0, 128, 0.12);
+            --shadow-gold: 0 4px 20px rgba(252, 216, 22, 0.35);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.7;
+            color: var(--slate);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-display);
+            color: var(--navy);
+            line-height: 1.25;
+            font-weight: 600;
+        }
+
+        h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+        h2 { font-size: clamp(2rem, 4vw, 3rem); }
+        h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
+        h4 { font-size: 1.25rem; }
+
+        p { margin-bottom: 1.25rem; }
+        p:last-child { margin-bottom: 0; }
+
+        a {
+            color: var(--navy);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--gold);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .section--navy {
+            background: var(--navy);
+            color: var(--cream);
+        }
+
+        .section--navy h2,
+        .section--navy h3,
+        .section--navy h4 {
+            color: var(--white);
+        }
+
+        .section--cream-dark {
+            background: var(--cream-dark);
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: var(--white);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo__icon {
+            width: 48px;
+            height: 48px;
+            background: var(--navy);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .logo__icon svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo__text {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        .logo__text span {
+            display: block;
+            font-size: 0.7rem;
+            font-family: var(--font-body);
+            font-weight: 500;
+            color: var(--slate-light);
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .nav__links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav__link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--slate);
+            transition: color 0.3s ease;
+        }
+
+        .nav__link:hover {
+            color: var(--navy);
+        }
+
+        .nav__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+            font-size: 0.95rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav__cta:hover {
+            background: var(--gold-light);
+            color: var(--navy);
+            box-shadow: var(--shadow-gold);
+            transform: translateY(-2px);
+        }
+
+        .mobile-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .mobile-toggle span {
+            width: 24px;
+            height: 2px;
+            background: var(--navy);
+            transition: all 0.3s ease;
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 80px;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(252, 216, 22, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .hero__content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .hero__text {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .hero__badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: var(--white);
+            border: 1px solid var(--gold);
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--navy);
+            margin-bottom: 24px;
+        }
+
+        .hero__badge::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        .hero h1 {
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+        }
+
+        .hero__subtitle {
+            font-size: 1.2rem;
+            color: var(--slate);
+            margin-bottom: 40px;
+            max-width: 540px;
+        }
+
+        .hero__actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 16px 32px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: none;
+            text-decoration: none;
+        }
+
+        .btn--primary {
+            background: var(--navy);
+            color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn--primary:hover {
+            background: var(--navy-light);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .btn--secondary {
+            background: var(--white);
+            color: var(--navy);
+            border: 2px solid var(--navy);
+        }
+
+        .btn--secondary:hover {
+            background: var(--navy);
+            color: var(--white);
+        }
+
+        .btn--gold {
+            background: var(--gold);
+            color: var(--navy);
+            font-weight: 700;
+        }
+
+        .btn--gold:hover {
+            background: var(--gold-light);
+            color: var(--navy);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .hero__image {
+            position: relative;
+            animation: fadeInRight 0.8s ease 0.2s forwards;
+            opacity: 0;
+        }
+
+        .hero__card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 48px;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+        }
+
+        .hero__card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--navy), var(--gold));
+            border-radius: 16px 16px 0 0;
+        }
+
+        .hero__stat {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .hero__stat-number {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1;
+        }
+
+        .hero__stat-number span {
+            color: var(--gold-dark);
+        }
+
+        .hero__stat-label {
+            font-size: 1.1rem;
+            color: var(--slate);
+            margin-top: 8px;
+        }
+
+        .hero__features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .hero__feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--cream);
+            border-radius: 8px;
+            font-weight: 500;
+        }
+
+        .hero__feature svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--success);
+            flex-shrink: 0;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--navy);
+            padding: 60px 0;
+            position: relative;
+        }
+
+        .stats-bar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+        }
+
+        .stats-bar__grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item__number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .stat-item__label {
+            font-size: 0.95rem;
+            color: var(--cream);
+            opacity: 0.9;
+        }
+
+        /* About Section */
+        .about__grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about__image {
+            position: relative;
+        }
+
+        .about__image-main {
+            background: var(--navy);
+            border-radius: 16px;
+            padding: 60px 40px;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about__image-main::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
+        }
+
+        .about__quote {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-style: italic;
+            line-height: 1.4;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .about__quote::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--gold);
+            line-height: 0;
+            position: absolute;
+            top: 20px;
+            left: -10px;
+        }
+
+        .about__attribution {
+            font-size: 0.95rem;
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        .about__badge {
+            position: absolute;
+            bottom: -20px;
+            right: 40px;
+            background: var(--gold);
+            color: var(--navy);
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .about__content h2 {
+            margin-bottom: 24px;
+        }
+
+        .about__content h2 span {
+            color: var(--gold);
+        }
+
+        .about__lead {
+            font-size: 1.15rem;
+            color: var(--navy);
+            font-weight: 500;
+            margin-bottom: 24px;
+        }
+
+        .about__list {
+            list-style: none;
+            margin: 32px 0;
+        }
+
+        .about__list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .about__list li:last-child {
+            border-bottom: none;
+        }
+
+        .about__list svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .about__list strong {
+            color: var(--navy);
+        }
+
+        /* Services Section */
+        .services {
+            background: var(--cream-dark);
+        }
+
+        .services__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .services__header h2 {
+            margin-bottom: 16px;
+        }
+
+        .services__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gold);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .service-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .service-card__icon {
+            width: 64px;
+            height: 64px;
+            background: var(--cream);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .service-card__icon svg {
+            width: 32px;
+            height: 32px;
+            fill: var(--navy);
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            margin-bottom: 16px;
+        }
+
+        .service-card p {
+            color: var(--slate);
+            font-size: 0.95rem;
+        }
+
+        /* Process Section */
+        .process__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .process__timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .process__timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: var(--cream-dark);
+            transform: translateX(-50%);
+        }
+
+        .process__step {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .process__step:last-child {
+            margin-bottom: 0;
+        }
+
+        .process__step:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .process__step:nth-child(even) .process__content {
+            text-align: right;
+        }
+
+        .process__number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 56px;
+            height: 56px;
+            background: var(--navy);
+            color: var(--gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            z-index: 1;
+            box-shadow: var(--shadow-md);
+        }
+
+        .process__content {
+            flex: 1;
+            padding: 32px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .process__content h3 {
+            font-size: 1.35rem;
+            margin-bottom: 12px;
+        }
+
+        .process__content p {
+            color: var(--slate);
+            margin-bottom: 0;
+        }
+
+        .process__spacer {
+            flex: 1;
+        }
+
+        /* Difference Section */
+        .difference {
+            background: var(--navy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .difference::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(252, 216, 22, 0.12) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .difference__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .difference__header p {
+            color: var(--cream);
+            opacity: 0.9;
+        }
+
+        .difference__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .difference-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 40px 32px;
+            transition: all 0.3s ease;
+        }
+
+        .difference-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .difference-card__icon {
+            width: 56px;
+            height: 56px;
+            background: var(--gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .difference-card__icon svg {
+            width: 28px;
+            height: 28px;
+            fill: var(--navy);
+        }
+
+        .difference-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .difference-card p {
+            color: var(--cream);
+            opacity: 0.85;
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--cream-dark);
+        }
+
+        .testimonials__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .testimonials__grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-family: var(--font-display);
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.2;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            line-height: 1;
+        }
+
+        .testimonial-card__text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--slate);
+            margin-bottom: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-card__author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-card__avatar {
+            width: 56px;
+            height: 56px;
+            background: var(--navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold);
+            font-family: var(--font-display);
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .testimonial-card__name {
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .testimonial-card__case {
+            font-size: 0.9rem;
+            color: var(--slate-light);
+        }
+
+        .testimonial-card__stars {
+            display: flex;
+            gap: 4px;
+            margin-top: 4px;
+        }
+
+        .testimonial-card__stars svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--gold);
+        }
+
+        /* FAQ Section */
+        .faq__header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .faq__grid {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-item__question {
+            width: 100%;
+            padding: 24px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            background: var(--white);
+            border: none;
+            cursor: pointer;
+            font-family: var(--font-body);
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--navy);
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item__question:hover {
+            background: var(--cream);
+        }
+
+        .faq-item__question svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold);
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-item__question svg {
+            transform: rotate(180deg);
+        }
+
+        .faq-item__answer {
+            padding: 0 32px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-item__answer {
+            padding: 0 32px 24px;
+            max-height: 500px;
+        }
+
+        .faq-item__answer p {
+            color: var(--slate);
+        }
+
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(252, 216, 22, 0.2) 0%, transparent 60%);
+        }
+
+        .cta__content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .cta h2 span {
+            color: var(--gold);
+        }
+
+        .cta p {
+            color: var(--cream);
+            font-size: 1.15rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        .cta__actions {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .cta__phone {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 40px;
+            justify-content: center;
+        }
+
+        .cta__phone svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold);
+        }
+
+        .cta__phone a {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-family: var(--font-display);
+            font-weight: 600;
+        }
+
+        .cta__phone a:hover {
+            color: var(--gold);
+        }
+
+        /* Footer */
+        .footer {
+            background: #0f1729;
+            color: var(--cream);
+            padding: 80px 0 40px;
+        }
+
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer__brand .logo__text {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+
+        .footer__brand p {
+            color: var(--cream);
+            opacity: 0.7;
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+
+        .footer__tagline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--gold);
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-style: italic;
+        }
+
+        .footer__col h4 {
+            color: var(--white);
+            font-size: 1rem;
+            margin-bottom: 20px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer__links {
+            list-style: none;
+        }
+
+        .footer__links li {
+            margin-bottom: 12px;
+        }
+
+        .footer__links a {
+            color: var(--cream);
+            opacity: 0.7;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer__links a:hover {
+            opacity: 1;
+            color: var(--gold);
+        }
+
+        .footer__contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 16px;
+            color: var(--cream);
+            opacity: 0.7;
+            font-size: 0.95rem;
+        }
+
+        .footer__contact-item svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gold);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .footer__bottom {
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer__copyright {
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        .footer__legal {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer__legal a {
+            font-size: 0.9rem;
+            color: var(--cream);
+            opacity: 0.6;
+        }
+
+        .footer__legal a:hover {
+            opacity: 1;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero__content {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .hero__image {
+                order: -1;
+                max-width: 500px;
+                margin: 0 auto;
+                opacity: 1;
+            }
+
+            .about__grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .services__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .difference__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer__grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 70px 0;
+            }
+
+            .nav__links,
+            .nav__cta {
+                display: none;
+            }
+
+            .mobile-toggle {
+                display: flex;
+            }
+
+            .stats-bar__grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .services__grid,
+            .difference__grid,
+            .testimonials__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .process__timeline::before {
+                left: 28px;
+            }
+
+            .process__step,
+            .process__step:nth-child(even) {
+                flex-direction: column;
+                gap: 20px;
+                padding-left: 80px;
+            }
+
+            .process__step:nth-child(even) .process__content {
+                text-align: left;
+            }
+
+            .process__number {
+                left: 28px;
+                transform: translateX(-50%);
+            }
+
+            .process__spacer {
+                display: none;
+            }
+
+            .footer__grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .stats-bar__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta__actions {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 80px;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            padding: 24px;
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu__links {
+            list-style: none;
+            margin-bottom: 24px;
+        }
+
+        .mobile-menu__links li {
+            border-bottom: 1px solid var(--cream-dark);
+        }
+
+        .mobile-menu__links a {
+            display: block;
+            padding: 16px 0;
+            font-weight: 500;
+            color: var(--navy);
+        }
+
+        .mobile-menu__cta {
+            width: 100%;
+        }
     </style>
 </head>
-<body class="bg-slate-50 font-['Inter'] text-slate-900 selection:bg-gold selection:text-navy">
-
-    <nav class="sticky top-0 z-50 glass border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="font-black text-xl tracking-tighter text-[#000080]">
-                NORTHEAST <span class="text-slate-400">DISABILITY</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-slate-600">
-                <a href="#intelligence" class="hover:text-navy transition">ALJ Intelligence</a>
-                <a href="#concierge" class="hover:text-navy transition">Client Concierge</a>
-                <a href="#team" class="hover:text-navy transition">The Experts</a>
-            </div>
-            <a href="tel:8605550199" class="bg-navy text-white px-5 py-2 rounded font-bold text-sm">860.555.0199</a>
-        </div>
-    </nav>
-
-    <header class="relative bg-navy text-white overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-        <div class="max-w-7xl mx-auto px-6 py-32 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <span class="inline-block bg-gold text-navy px-3 py-1 rounded text-xs font-black uppercase tracking-tighter mb-6">Nationwide Representation</span>
-                <h1 class="text-6xl lg:text-7xl font-black leading-tight mb-6">We Finish <br><span class="text-gold italic font-serif">the Fight.</span></h1>
-                <p class="text-xl text-slate-300 mb-10 max-w-lg leading-relaxed">Systematic, data-driven disability advocacy. We don't just file papers; we build unassailable cases using advanced ALJ intelligence.</p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="bg-gold text-navy px-10 py-5 rounded-md font-black uppercase tracking-widest hover:scale-105 transition shadow-xl">Get Case Evaluation</button>
-                    <div class="flex items-center gap-4 px-6 text-sm font-bold opacity-80">
-                        <i class="fas fa-shield-alt text-gold text-2xl"></i>
-                        <span>EDPNA Certified <br>+ JD Powered</span>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">
+                    <div class="logo__icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Outer circle -->
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <!-- Inner circle -->
+                            <circle cx="50" cy="50" r="8" fill="#ffffff"/>
+                            <!-- North point - emphasized in gold -->
+                            <polygon points="50,8 58,42 50,35 42,42" fill="#FCD816"/>
+                            <!-- East point -->
+                            <polygon points="92,50 58,58 65,50 58,42" fill="#ffffff"/>
+                            <!-- South point -->
+                            <polygon points="50,92 42,58 50,65 58,58" fill="#ffffff"/>
+                            <!-- West point -->
+                            <polygon points="8,50 42,42 35,50 42,58" fill="#ffffff"/>
+                            <!-- N letter -->
+                            <text x="50" y="24" text-anchor="middle" fill="#FCD816" font-size="10" font-weight="bold" font-family="Arial, sans-serif">N</text>
+                        </svg>
                     </div>
+                    <div class="logo__text">
+                        Northeast Disability Advocates
+                        <span>Social Security Disability Representatives</span>
+                    </div>
+                </a>
+                
+                <nav class="nav">
+                    <ul class="nav__links">
+                        <li><a href="#about" class="nav__link">About</a></li>
+                        <li><a href="#services" class="nav__link">Services</a></li>
+                        <li><a href="#process" class="nav__link">Process</a></li>
+                        <li><a href="#difference" class="nav__link">Why Us</a></li>
+                        <li><a href="#faq" class="nav__link">FAQ</a></li>
+                    </ul>
+                    <a href="#contact" class="nav__cta">
+                        Free Consultation
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </nav>
+
+                <div class="mobile-toggle" id="mobileToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </div>
-            <div class="hidden md:block relative">
-                <div class="absolute -inset-4 border-2 border-gold/30 rounded-xl translate-x-4 translate-y-4"></div>
-                <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=800&q=80" class="rounded-xl shadow-2xl relative z-10 grayscale hover:grayscale-0 transition duration-700" alt="Legal Building">
             </div>
         </div>
     </header>
 
-    <section id="intelligence" class="py-24 px-6">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-                <div class="max-w-2xl">
-                    <h2 class="text-navy text-4xl font-black mb-4 uppercase tracking-tighter">Transparent Intelligence</h2>
-                    <p class="text-slate-600">Most firms hide judge data. We weaponize it. We track every Hartford & New Haven ALJ's quarterly approval rates to customize your hearing brief.</p>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu__links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#difference">Why Us</a></li>
+            <li><a href="#faq">FAQ</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--primary mobile-menu__cta">Free Consultation</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero__content">
+                <div class="hero__text">
+                    <div class="hero__badge">Federally Certified Representatives</div>
+                    <h1>We Fight For Your <span>Disability Benefits</span></h1>
+                    <p class="hero__subtitle">Denied Social Security Disability? Don't give up. Our federally certified team represents disabled workers nationwide with proven strategies that win cases others abandon.</p>
+                    <div class="hero__actions">
+                        <a href="#contact" class="btn btn--primary">
+                            Get Your Free Case Review
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="tel:+18885551234" class="btn btn--secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                            Call Now
+                        </a>
+                    </div>
                 </div>
-                <div class="bg-navy p-6 rounded-lg text-white">
-                    <p class="text-3xl font-black text-gold">46%</p>
-                    <p class="text-xs uppercase font-bold opacity-60">Variance between CT Judges</p>
+                
+                <div class="hero__image">
+                    <div class="hero__card">
+                        <div class="hero__stat">
+                            <div class="hero__stat-number">75<span>%</span></div>
+                            <div class="hero__stat-label">Hearing Win Rate Target</div>
+                        </div>
+                        <div class="hero__features">
+                            <div class="hero__feature">
+                                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                                No Upfront Fees – We Only Get Paid If You Win
+                            </div>
+                            <div class="hero__feature">
+                                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                                Nationwide Representation from Connecticut
+                            </div>
+                            <div class="hero__feature">
+                                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+                                Years of Federal Hearing Experience
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="grid lg:grid-cols-3 gap-8">
-                <div class="lg:col-span-2 overflow-hidden rounded-xl shadow-2xl border border-slate-200 bg-white">
-                    <table class="w-full text-left">
-                        <thead class="bg-slate-100 text-navy text-xs uppercase font-black tracking-widest">
-                            <tr>
-                                <th class="py-5 px-8">Hartford ALJ</th>
-                                <th class="py-5 px-8 text-center">Approval Rate</th>
-                                <th class="py-5 px-8">Strategic Preparation</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-sm">
-                            <tr class="hover:bg-slate-50 transition border-b border-slate-100">
-                                <td class="py-5 px-8 font-bold text-navy">Judge Lemoine</td>
-                                <td class="py-5 px-8 text-center text-green-600 font-black">82%</td>
-                                <td class="py-5 px-8"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Standard Prep</span></td>
-                            </tr>
-                            <tr class="hover:bg-slate-50 transition border-b border-slate-100">
-                                <td class="py-5 px-8 font-bold text-navy">Judge Noel</td>
-                                <td class="py-5 px-8 text-center text-green-600 font-black">73%</td>
-                                <td class="py-5 px-8"><span class="bg-green-100 text-green-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Standard Prep</span></td>
-                            </tr>
-                            <tr class="hover:bg-slate-50 transition border-b border-slate-100">
-                                <td class="py-5 px-8 font-bold text-navy">Judge Sweeney</td>
-                                <td class="py-5 px-8 text-center text-orange-500 font-black">53%</td>
-                                <td class="py-5 px-8"><span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Enhanced Prep</span></td>
-                            </tr>
-                            <tr class="hover:bg-slate-50 transition border-b border-slate-100">
-                                <td class="py-5 px-8 font-bold text-navy">Judge Molleur</td>
-                                <td class="py-5 px-8 text-center text-red-600 font-black">36%</td>
-                                <td class="py-5 px-8"><span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-bold uppercase">Maximum Prep</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-bar__grid">
+                <div class="stat-item">
+                    <div class="stat-item__number">70%</div>
+                    <div class="stat-item__label">Initial Applications Denied</div>
                 </div>
-                <div class="bg-navy text-white p-10 rounded-xl flex flex-col justify-center border-b-8 border-gold">
-                    <h3 class="text-2xl font-black mb-6">Preparation Tiers</h3>
-                    <ul class="space-y-6 text-sm">
-                        <li class="flex gap-4">
-                            <i class="fas fa-check text-gold mt-1"></i>
-                            <span><strong>Standard:</strong> Focus on RFC forms and treating physician opinions.</span>
+                <div class="stat-item">
+                    <div class="stat-item__number">18-24</div>
+                    <div class="stat-item__label">Months Average Wait Time</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-item__number">40%</div>
+                    <div class="stat-item__label">Our Case Conversion Rate</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-item__number">50</div>
+                    <div class="stat-item__label">States We Serve</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image">
+                    <div class="about__image-main">
+                        <p class="about__quote">I went to law school to complete what I started as an EDPNA. Not for BigLaw or prestige, but to represent disabled workers through federal district court and beyond.</p>
+                        <p class="about__attribution">— MDKM, Founder</p>
+                    </div>
+                    <div class="about__badge">Federally Certified EDPNA</div>
+                </div>
+                
+                <div class="about__content">
+                    <h2>Not Just Another <span>Disability Attorney</span></h2>
+                    <p class="about__lead">Most disability attorneys learn on the job. Our founder was federally certified and winning hearings before law school even began.</p>
+                    <p>As an Eligible for Direct Payment Non-Attorney (EDPNA), I represented disabled workers for years through administrative hearings. I passed the SSA's rigorous examination, maintain professional liability insurance, and complete annual continuing education in disability law.</p>
+                    <p>The limitation? EDPNAs cannot practice in federal court. When judges denied benefits despite strong evidence, I had to send clients away at exactly the moment they needed me most. Law school changed that.</p>
+                    
+                    <ul class="about__list">
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <div><strong>Federal Certification</strong> – SSA-certified representative with years of hearing experience</div>
                         </li>
-                        <li class="flex gap-4">
-                            <i class="fas fa-check text-gold mt-1"></i>
-                            <span><strong>Enhanced:</strong> Deep-dive Step 4 analysis of past relevant work.</span>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <div><strong>Full Representation</strong> – From initial application through federal court appeals</div>
                         </li>
-                        <li class="flex gap-4">
-                            <i class="fas fa-check text-gold mt-1"></i>
-                            <span><strong>Maximum:</strong> Step 5 VE cross-examination and Grid Rule pivots.</span>
+                        <li>
+                            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            <div><strong>Selective Excellence</strong> – We take cases we believe in, not every case that calls</div>
                         </li>
                     </ul>
                 </div>
@@ -123,67 +1523,475 @@
         </div>
     </section>
 
-    <section id="concierge" class="bg-slate-900 py-24 px-6 relative overflow-hidden">
-        <div class="max-w-5xl mx-auto relative z-10 text-center">
-            <h2 class="text-gold text-4xl font-black mb-8 tracking-tighter">UNREASONABLE HOSPITALITY</h2>
-            <p class="text-slate-400 text-xl mb-16 max-w-3xl mx-auto">The 18-month wait for a disability hearing is the hardest time of your life. While other firms disappear, we stay in the fight with you.</p>
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="services__header">
+                <h2>How We Help You Win</h2>
+                <p>Whether you're just starting your application or have been denied multiple times, we provide comprehensive disability representation at every stage.</p>
+            </div>
             
-            <div class="grid md:grid-cols-2 gap-8 text-left">
-                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold/50 transition">
-                    <i class="fas fa-home text-gold text-3xl mb-6"></i>
-                    <h4 class="text-white text-xl font-bold mb-4">Housing Stability</h4>
-                    <p class="text-slate-400">Our Concierge assists with rental assistance applications and emergency shelter connections to keep you safe during the wait.</p>
+            <div class="services__grid">
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
+                    <h3>Initial Applications</h3>
+                    <p>We help you apply correctly the first time, gathering medical evidence and presenting your case in the strongest possible light to maximize approval chances.</p>
                 </div>
-                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold/50 transition">
-                    <i class="fas fa-apple-alt text-gold text-3xl mb-6"></i>
-                    <h4 class="text-white text-xl font-bold mb-4">Nutrition Access</h4>
-                    <p class="text-slate-400">Direct help applying for SNAP (food stamps) and locating local food banks so you can focus on your health, not your next meal.</p>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                    </div>
+                    <h3>Reconsideration Appeals</h3>
+                    <p>Denied at the initial level? We analyze why and build a stronger case for reconsideration with additional medical documentation and legal arguments.</p>
                 </div>
-                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold/50 transition">
-                    <i class="fas fa-pills text-gold text-3xl mb-6"></i>
-                    <h4 class="text-white text-xl font-bold mb-4">Medical Continuity</h4>
-                    <p class="text-slate-400">We help navigate Medicaid enrollment and sliding-scale specialists. Better care means better evidence, which leads to a win.</p>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    </div>
+                    <h3>ALJ Hearings</h3>
+                    <p>This is where cases are won. We prepare you thoroughly, know every Connecticut judge's tendencies, and present compelling arguments that win approvals.</p>
                 </div>
-                <div class="bg-white/5 p-8 rounded-xl border border-white/10 hover:border-gold/50 transition">
-                    <i class="fas fa-trophy text-gold text-3xl mb-6"></i>
-                    <h4 class="text-white text-xl font-bold mb-4">The Victory Protocol</h4>
-                    <p class="text-slate-400">We don't stop at the win. We guide you through your first check, Medicare transition, and back-pay logistics.</p>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                    </div>
+                    <h3>Appeals Council</h3>
+                    <p>If the ALJ denies your claim, we continue fighting with detailed briefs to the Appeals Council highlighting legal and procedural errors.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+                    </div>
+                    <h3>Federal Court Litigation</h3>
+                    <p>Unlike non-attorney representatives, we can take your case to federal district court—giving you every possible chance at the benefits you deserve.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                    <h3>Client Concierge Support</h3>
+                    <p>The 18-month wait is hard. Our concierge helps you access food stamps, Medicaid, and housing assistance while your case is pending.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-white py-20 px-6 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
-            <div>
-                <div class="font-black text-2xl tracking-tighter text-navy mb-4">
-                    NORTHEAST <span class="text-slate-300">DISABILITY</span>
-                </div>
-                <p class="text-slate-500 text-sm max-w-xs">A nationwide federal practice headquartered in Hartford, Connecticut. We Finish the Fight.</p>
+    <!-- Process Section -->
+    <section class="section" id="process">
+        <div class="container">
+            <div class="process__header">
+                <h2>Your Path to Benefits</h2>
+                <p>We've streamlined the process to make your journey as smooth as possible. Here's what to expect when you work with us.</p>
             </div>
-            <div class="grid grid-cols-2 gap-20">
-                <div>
-                    <h5 class="font-black uppercase text-xs tracking-widest text-slate-400 mb-6">Navigation</h5>
-                    <ul class="text-sm font-bold space-y-4 text-navy">
-                        <li><a href="#" class="hover:text-gold transition">ALJ Data</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Our Process</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Contact</a></li>
-                    </ul>
+            
+            <div class="process__timeline">
+                <div class="process__step">
+                    <div class="process__content">
+                        <h3>Free Case Evaluation</h3>
+                        <p>We review your situation, medical conditions, and work history. Within 24 hours, you'll know if we can help and exactly what to expect.</p>
+                    </div>
+                    <div class="process__number">1</div>
+                    <div class="process__spacer"></div>
                 </div>
-                <div>
-                    <h5 class="font-black uppercase text-xs tracking-widest text-slate-400 mb-6">Legal</h5>
-                    <ul class="text-sm font-bold space-y-4 text-navy">
-                        <li><a href="#" class="hover:text-gold transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Disclaimer</a></li>
-                        <li><a href="#" class="hover:text-gold transition">Sitemap</a></li>
-                    </ul>
+                
+                <div class="process__step">
+                    <div class="process__spacer"></div>
+                    <div class="process__number">2</div>
+                    <div class="process__content">
+                        <h3>Evidence Development</h3>
+                        <p>We gather your complete medical records, obtain treating physician statements, and build a comprehensive file that proves your disability.</p>
+                    </div>
+                </div>
+                
+                <div class="process__step">
+                    <div class="process__content">
+                        <h3>Application or Appeal</h3>
+                        <p>We submit your claim with all supporting documentation, presenting your case in the format that maximizes your chances of approval.</p>
+                    </div>
+                    <div class="process__number">3</div>
+                    <div class="process__spacer"></div>
+                </div>
+                
+                <div class="process__step">
+                    <div class="process__spacer"></div>
+                    <div class="process__number">4</div>
+                    <div class="process__content">
+                        <h3>Hearing Preparation</h3>
+                        <p>If needed, we prepare you thoroughly for your ALJ hearing—including mock testimony, judge-specific strategies, and comprehensive briefing.</p>
+                    </div>
+                </div>
+                
+                <div class="process__step">
+                    <div class="process__content">
+                        <h3>Victory & Beyond</h3>
+                        <p>When you win, we explain exactly what your decision means, when payments arrive, and help you transition to your new benefits smoothly.</p>
+                    </div>
+                    <div class="process__number">5</div>
+                    <div class="process__spacer"></div>
                 </div>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto mt-20 pt-8 border-t border-slate-100 text-center text-xs text-slate-400 uppercase font-black tracking-widest">
-            &copy; 2026 Northeast Disability Advocates, LLC | All Rights Reserved
+    </section>
+
+    <!-- Difference Section -->
+    <section class="section difference" id="difference">
+        <div class="container">
+            <div class="difference__header">
+                <h2>The Northeast Difference</h2>
+                <p>We reject the broken models of disability practice. High-volume mills accept everyone and win nothing. Solo practitioners cherry-pick easy cases. We do neither.</p>
+            </div>
+            
+            <div class="difference__grid">
+                <div class="difference-card">
+                    <div class="difference-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <h3>Selective Intake</h3>
+                    <p>We use a 100-point scoring system to accept only cases with strong evidence of disability. This means 40% conversion rates versus the industry's 10-15%.</p>
+                </div>
+                
+                <div class="difference-card">
+                    <div class="difference-card__icon">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>5-Minute Response</h3>
+                    <p>When you reach out, we respond within 5 minutes during business hours. Not 5 days. Not "as soon as possible." Five minutes.</p>
+                </div>
+                
+                <div class="difference-card">
+                    <div class="difference-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <h3>Judge Intelligence</h3>
+                    <p>We track every Connecticut ALJ's approval rates quarterly and adjust our preparation intensity based on your assigned judge.</p>
+                </div>
+                
+                <div class="difference-card">
+                    <div class="difference-card__icon">
+                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                    <h3>Concierge Support</h3>
+                    <p>While you wait, we help you access food stamps, Medicaid, and housing assistance. Your survival matters as much as your case.</p>
+                </div>
+                
+                <div class="difference-card">
+                    <div class="difference-card__icon">
+                        <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    </div>
+                    <h3>Federal Court Ready</h3>
+                    <p>Unlike non-attorney representatives, we can take your case all the way to federal district court. We never abandon you at the worst moment.</p>
+                </div>
+                
+                <div class="difference-card">
+                    <div class="difference-card__icon">
+                        <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    </div>
+                    <h3>No Upfront Costs</h3>
+                    <p>We work on contingency—you pay nothing unless we win. Our fee is capped by federal law at 25% of back pay or $9,200, whichever is less.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section testimonials">
+        <div class="container">
+            <div class="testimonials__header">
+                <h2>Client Stories</h2>
+                <p>Real results from real clients whose lives changed when they finally received the benefits they deserved.</p>
+            </div>
+            
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">After being denied twice on my own, I was ready to give up. They took over my case, got additional medical evidence I didn't even know existed, and won at my hearing. The back pay changed my life.</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">MJ</div>
+                        <div>
+                            <div class="testimonial-card__name">Former Manufacturing Worker</div>
+                            <div class="testimonial-card__case">Approved after ALJ Hearing</div>
+                            <div class="testimonial-card__stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-card__text">What impressed me most was how they helped me beyond just the case. When I was struggling to pay bills during the wait, they connected me with programs I didn't know about. That's real advocacy.</p>
+                    <div class="testimonial-card__author">
+                        <div class="testimonial-card__avatar">RD</div>
+                        <div>
+                            <div class="testimonial-card__name">Former Healthcare Worker</div>
+                            <div class="testimonial-card__case">Approved with Back Pay</div>
+                            <div class="testimonial-card__stars">
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="faq__header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about Social Security Disability and our representation services.</p>
+            </div>
+            
+            <div class="faq__grid">
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        How much does it cost to hire you?
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Nothing upfront. We work on contingency, which means we only get paid if you win. Federal law caps our fee at 25% of your past-due benefits or $9,200—whichever is less. You never pay more than that, and you never pay out of pocket.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        I was denied. Is it too late?
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Usually not. You have 60 days from your denial date to appeal. Even if you've missed that deadline, we may be able to reopen your case or file a new application. Contact us immediately to discuss your options—time matters in these situations.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        How long does the process take?
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>The full process typically takes 18-24 months from initial application to hearing decision, though some cases resolve faster. Connecticut's average hearing wait is 7.5 months—faster than the national average of 9.3 months. We work to expedite cases whenever possible.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        Do you take cases from outside Connecticut?
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Yes. Social Security Disability is federal law—it works the same in all 50 states. We represent clients nationwide using remote hearings and cloud-based systems. Your location doesn't limit your access to quality representation.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        What conditions qualify for disability?
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Any condition that prevents you from working for at least 12 months may qualify—including chronic pain, mental health conditions, cancer, heart disease, musculoskeletal disorders, and many others. The key is documented medical evidence and inability to perform substantial work.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-item__question">
+                        Why don't you take every case?
+                        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+                    </button>
+                    <div class="faq-item__answer">
+                        <p>Because accepting cases we can't win doesn't help anyone. We use a 100-point scoring system to evaluate medical evidence, treatment history, and other factors. Cases below our threshold get referred to other resources. This selectivity means our clients get our full attention and highest win rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta" id="contact">
+        <div class="container">
+            <div class="cta__content">
+                <h2>Ready to <span>Fight for Your Benefits?</span></h2>
+                <p>Don't navigate the disability system alone. Get a free, no-obligation case review from our federally certified team. We'll tell you honestly whether we can help.</p>
+                <div class="cta__actions">
+                    <a href="#" class="btn btn--gold">
+                        Start Your Free Case Review
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                <div class="cta__phone">
+                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                    <a href="tel:+18885551234">(888) 555-1234</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="50" height="50" style="margin-bottom: 16px;">
+                            <circle cx="50" cy="50" r="45" fill="none" stroke="#ffffff" stroke-width="2"/>
+                            <circle cx="50" cy="50" r="8" fill="#ffffff"/>
+                            <polygon points="50,8 58,42 50,35 42,42" fill="#FCD816"/>
+                            <polygon points="92,50 58,58 65,50 58,42" fill="#ffffff"/>
+                            <polygon points="50,92 42,58 50,65 58,58" fill="#ffffff"/>
+                            <polygon points="8,50 42,42 35,50 42,58" fill="#ffffff"/>
+                            <text x="50" y="24" text-anchor="middle" fill="#FCD816" font-size="10" font-weight="bold" font-family="Arial, sans-serif">N</text>
+                        </svg>
+                    </div>
+                    <div class="logo__text">Northeast Disability Advocates</div>
+                    <p>Federally certified disability representatives fighting for the benefits you've earned. Based in Connecticut, serving clients nationwide.</p>
+                    <div class="footer__tagline">"We Finish the Fight."</div>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Services</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Initial Applications</a></li>
+                        <li><a href="#">Reconsideration Appeals</a></li>
+                        <li><a href="#">ALJ Hearings</a></li>
+                        <li><a href="#">Appeals Council</a></li>
+                        <li><a href="#">Federal Court</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Resources</h4>
+                    <ul class="footer__links">
+                        <li><a href="#">Disability Blog</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Free Case Review</a></li>
+                        <li><a href="#">SSA Resources</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__col">
+                    <h4>Contact</h4>
+                    <div class="footer__contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+                        <span>(888) 555-1234</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        <span>info@northeastdisability.com</span>
+                    </div>
+                    <div class="footer__contact-item">
+                        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        <span>Hartford, Connecticut<br>Serving All 50 States</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    © 2026 Northeast Disability Advocates, LLC. All rights reserved.
+                </div>
+                <div class="footer__legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
         </div>
     </footer>
 
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu toggle
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking links
+        document.querySelectorAll('.mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-item__question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't already open
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                }
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe elements for scroll animations
+        document.querySelectorAll('.service-card, .difference-card, .testimonial-card, .process__step').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
 </body>
 </html>
